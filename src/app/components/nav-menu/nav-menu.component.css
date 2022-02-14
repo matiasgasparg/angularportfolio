@@ -1,0 +1,30 @@
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    left: 70%;
+    
+  }
+  
+  .navbar__link {
+    padding-left: 10px;
+  }
+  
+  .navbar__link a {
+    color: #8e8e8e;
+    transition: color 0.3s;
+  }
+  
+  .navbar__link a:hover {
+    color: var(--blue);
+    transition: color 0.3s;
+  }
+  
+  .navbar__menu {
+    display: none;
+    align-items: center;
+    font-size: 35px;
+   
+  }
