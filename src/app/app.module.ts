@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { AboutComponent } from './components/about/about.component';
     NavComponent,
     HomeComponent,
     AboutComponent,
+    SkillComponent,
+    EducacionComponent,
   ],
   imports: [
     BrowserModule,
