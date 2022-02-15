@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import{ HttpClientModule}from"@angular/common/http";
+
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { NavMenuSocialmediaComponent } from './components/nav-menu-socialmedia/nav-menu-socialmedia.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,11 +20,12 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     NavComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
