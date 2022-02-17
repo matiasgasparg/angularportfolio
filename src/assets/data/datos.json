@@ -1,0 +1,24 @@
+{
+	"sobremi": {
+		"titulo": "Construí sitios web y aplicaciones web.También un estudiante de Agronomía y trabajador rural,interesado en relacionar la tecnología con las prácticas agroecologias y sustentables. "
+	},
+
+
+
+	"exp": [{
+		"company": "Pro-Huerta",
+		"imgen": "https://i.ibb.co/yFG2R53/logo-prohuerta-2017.jpg",
+		"info": " Administración de equipamientos de campo. Pasantía en la que estuve a cargo del registro de entrada y salida de equipamiento exclusivo de tareas agropecuarias, además de su mantenimiento y reposición",
+		"date": "2018-2019"
+
+	},
+	{
+			"company": "UNSa",
+			"imgen": "https://economicas.unsa.edu.ar/web/archivos/otros/escudoUNSa.jpg",
+			"info": " Censo Forestal.Pasantía en la cual realizaba la identificación de especies forestales nativas, georreferenciación estado fitosanitario, de desarrollo, problemas que pudieren estar ocasionando y condiciones del espacio, entre otros.",
+			"date": "2018-2019"
+	}
+
+]
+	}
+	

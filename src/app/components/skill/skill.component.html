@@ -3,20 +3,20 @@
 
       <h2>Experiencia</h2>
     </div>
-      <div class="skill__grid">
+      <div class="skill__grid" *ngFor="let exp of expList">
         <div class="skill__description" >
-            <img src="https://i.ibb.co/yFG2R53/logo-prohuerta-2017.jpg">
-          <h2> Pro-Huerta</h2>
+            <img [src]="exp.imgen">
+          <h2> {{exp.company}}</h2>
           <p >
-            Administración de equipamientos de campo. Pasantía en la que estuve a cargo del registro de entrada y salida de equipamiento exclusivo de
-            tareas agropecuarias, además de su mantenimiento y reposición
+            {{exp.info}}
           </p>
           <p>
-            2018-2019
+            {{exp.date}}
         </p>
         </div>
   
       </div>
+      <!--
       <div class="skill__grid">
         <div class="skill__description" >
             <img src="https://economicas.unsa.edu.ar/web/archivos/otros/escudoUNSa.jpg">
@@ -35,3 +35,4 @@
       </div>
 
     </div>
+  -->

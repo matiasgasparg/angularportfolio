@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import{ HttpClientModule}from"@angular/common/http";
 
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
-import { NavMenuSocialmediaComponent } from './components/nav-menu-socialmedia/nav-menu-socialmedia.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,7 +17,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    NavMenuSocialmediaComponent,
     HeaderComponent,
     NavComponent,
     HomeComponent,
