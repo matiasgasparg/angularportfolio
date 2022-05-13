@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AboutComponent implements OnInit {
-aboutme:any;
+aboutMe:any;
 
   constructor(
     private datos:AboutmeService
@@ -19,7 +19,7 @@ aboutme:any;
   ngOnInit(): void {
    this.datos.obtenerTexto().subscribe(datos=>{
     console.log(datos);
-    this.aboutme=datos
+    this.aboutMe=datos.sobremi
    });
     }
 

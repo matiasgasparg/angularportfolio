@@ -6,14 +6,7 @@
   }
 
   
-  .container{
-     width: 100%;
-    display: inherit;
-    max-width: 1200px;
-    justify-content: inherit;
-    margin: 0 auto;
-    padding: 0 px;
-  }
+  
   section {
     padding: 90px 0;
     text-align: center;
