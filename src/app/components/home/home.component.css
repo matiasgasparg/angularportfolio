@@ -1,13 +1,13 @@
 .home {
     min-height: 100vh;
     display: flex;
-    padding: 30px;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
-    position: relative;
   }
   .home__background {
+    min-height: 100vh;
+
     background-color: #8e8e8e;
     background-image: url(fondopag.png);
     background-attachment: fixed;

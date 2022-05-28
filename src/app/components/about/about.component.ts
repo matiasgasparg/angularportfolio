@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Aboutme } from 'src/app/aboutme';
-import { ABOUTME } from 'src/app/mock-aboutme';
-import { AboutmeService } from 'src/app/service/aboutme.service';
-import { HttpClient } from '@angular/common/http';
+import { Persona } from 'src/app/service/interface/Persona';
+import { PersonaService } from 'src/app/service/api-rest/persona.service';
+import { AutenticationService } from 'src/app/servicios/autentication.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -10,17 +9,26 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AboutComponent implements OnInit {
-aboutme:any;
+  public url_foto:string="";
 
+  public persona:Persona ={
+    idpersona: "1", nombre: "", apellido: "", acerca: "", titulo: "", correo: "",
+    telefono: "",
+    ubicacion: "",
+    fotourl: ""
+  }
   constructor(
-    private datos:AboutmeService
+    private api:PersonaService,private aut:AutenticationService
   ) { }
 
   ngOnInit(): void {
-   this.datos.obtenerTexto().subscribe(datos=>{
-    console.log(datos);
-    this.aboutme=datos
-   });
-    }
+    this.getById(1);
+  }
+  getById(id:number){
+    this.api.getById(id).subscribe(
+    data=>{this.persona=data}
+  
+    );
+  }
 
 }

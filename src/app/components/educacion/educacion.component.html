@@ -1,48 +1,20 @@
+
+
 <h2 class="educ__tittle">Educación</h2>
 
-<div class="container__educ">     
-            <div class="educ__description" >
-                <img src="https://turnos.unsa.edu.ar/img/logounsa.png">
+<div class="container__educ"*ngFor="let edu of EduList" >     
+            <div class="educ__description"  >
+                <img [src]="edu.fotourl" >
 
-              <h2 class="educ__subtittle"> Estudiante de Ing. Agrónomica</h2>
+              <h2 class="educ__subtittle" > {{edu.titulo}}</h2>
               <br>
 
-              <p>
-                5° año (curso) Universidad Nacional de Salta
-                
+              <p> 
+                  {{edu.fechafin}}
               </p>
               
             </div>
       
 </div>
-<div class="container__educ">     
-    <div class="educ__description" >
-        <img src="https://turnos.unsa.edu.ar/img/logounsa.png">
 
-      <h2 class="educ__subtittle"> Tecnicatura en Programación</h2>
-      <br>
 
-      <p>
-        1° año (curso) Universidad Nacional de Salta
-        
-      </p>
-      
-    </div>
-
-</div>
-
-<div class="container__educ">     
-    <div class="educ__description" >
-        <img src="https://i.ibb.co/TY01gz8/imagen-2022-02-15-194855.png">
-
-      <h2 class="educ__subtittle"> Argentina Programa</h2>
-      <br>
-
-      <p>
-       1° Etapa #SeProgramar
-        
-      </p>
-      
-    </div>
-
-</div>

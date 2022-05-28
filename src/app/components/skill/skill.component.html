@@ -5,34 +5,15 @@
     </div>
       <div class="skill__grid" *ngFor="let exp of expList">
         <div class="skill__description" >
-            <img [src]="exp.imgen">
-          <h2> {{exp.company}}</h2>
+            <img [src]="exp.fotourl">
+          <h2> {{exp.empresa}}</h2>
           <p >
-            {{exp.info}}
+            {{exp.descripcion}}
           </p>
           <p>
-            {{exp.date}}
+            {{exp.inicio}}
         </p>
         </div>
   
       </div>
-      <!--
-      <div class="skill__grid">
-        <div class="skill__description" >
-            <img src="https://economicas.unsa.edu.ar/web/archivos/otros/escudoUNSa.jpg">
-          <h2> UNSa</h2>
-          <p >
-            Censo Forestal
-            Pasantía en la cual realizaba la identificación de especies forestales nativas, georreferenciación,
-            estado fitosanitario, de desarrollo, problemas que pudieren estar ocasionando y condiciones del
-            espacio, entre otros.
-          </p>
-          <p>
-            2018-2019
-        </p>
-        </div>
-  
-      </div>
-
-    </div>
-  -->
+     

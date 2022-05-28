@@ -6,7 +6,7 @@
     position: absolute;
     left: 70%;
     
-  }
+  }       
   
   .navbar__link {
     padding-left: 10px;
@@ -27,4 +27,9 @@
     align-items: center;
     font-size: 35px;
    
+  }
+  .img__red_1{
+      
+      max-width: 100%;
+  height: auto;
   }

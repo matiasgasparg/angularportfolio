@@ -1,0 +1,19 @@
+<div class="container">
+<h1 class="m-5">Iniciar Sesion</h1>
+<form  class="m-5">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input [(ngModel)]="sesion.username" type="text">
+    
+  
+    
+  </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input [(ngModel)]="sesion.password" type="password" >
+   
+</div>
+    <button type="submit" class="btn btn-primary " (click)="logear()">Submit</button>
+    <button type="submit" class="btn btn-primary " (click)="volverAlHome()">Volver</button>
+  </form>
+</div>
