@@ -16,7 +16,10 @@ export class HomeComponent implements OnInit {
     idpersona: "1", nombre: "", apellido: "", acerca: "", titulo: "", correo: "",
     telefono: "",
     ubicacion: "",
-    fotourl: ""
+    fotourl: "",
+    password:"",
+    username:"",
+    token:""
   }
   constructor(private api:PersonaService,private aut:AutenticationService) { }
 

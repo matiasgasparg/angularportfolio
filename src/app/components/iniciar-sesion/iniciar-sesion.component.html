@@ -1,19 +1,59 @@
-<div class="container">
-<h1 class="m-5">Iniciar Sesion</h1>
-<form  class="m-5">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input [(ngModel)]="sesion.username" type="text">
-    
+<main *ngIf="!loading" else esperando>
   
-    
-  </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input [(ngModel)]="sesion.password" type="password" >
+  <form class="container d-flex justify-content-center">
    
-</div>
-    <button type="submit" class="btn btn-primary " (click)="logear()">Submit</button>
-    <button type="submit" class="btn btn-primary " (click)="volverAlHome()">Volver</button>
+    <mat-card class="formulario">
+    
+      <mat-card-header class="d-flex justify-content-center"> 
+        <mat-card-title class="fs-1">¡Bienvenido!</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <div>
+          <mat-form-field [formGroup]="form"  appearance="fill" >
+            <mat-label>Ingrese su usuario</mat-label>          
+            <input matInput formControlName="username" matInput placeholder="example@example.com">          
+            <mat-error *ngIf="Username?.errors && Username?.touched">
+              <p *ngIf="Username?.hasError('required')">El email es requerido.</p>           
+              <p *ngIf="Username?.hasError('username')">El formato debe ser válido.</p>     
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field [formGroup]="form"  appearance="fill" >
+            <mat-label>Ingrese su contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="Password?.errors && Password?.touched">
+              <p *ngIf="Password?.hasError('required')">La contraseña es requerido.</p>           
+              <p *ngIf="Password?.hasError('minlength')">La contraseña debe ser de 8 o más caracteres.</p>                       
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+      </mat-card-content>
+      <mat-card-actions class="py-3 d-flex justify-content-center">
+        <button class=" btn btn-lg btn btn-dark " mat-raised-button color="secondary"  type="submit" (click)="iniciarSesion()">Ingresar</button>
+      </mat-card-actions>
+         
+      <mat-card-actions class="pb-2 ps-2 d-flex justify-content-start">
+        <button class=" btn btn-lg btn btn-dark  " mat-raised-button color="secondary" (click)="volverHome()">Volver</button>
+      </mat-card-actions>
+  
+    </mat-card>
+  
+  
   </form>
-</div>
+  
+  </main>
+  
+  <div *ngIf="loading" class=" d-flex justify-content-center" id="espera">
+    <div class="loadingio-eclipse">
+      <div class="ldio-rpinwye8j0b">
+       <div>
+       </div>
+     </div>
+    </div>
+  </div>

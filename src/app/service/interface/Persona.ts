@@ -8,10 +8,9 @@ export interface Persona {
     ubicacion:String;
     acerca:String;
     fotourl:String;
-    token?:String;
-}
-
-export interface Login{
     username:string
     password:string
+    token:String;
+
 }
+

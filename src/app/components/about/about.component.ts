@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Persona } from 'src/app/service/interface/Persona';
 import { PersonaService } from 'src/app/service/api-rest/persona.service';
 import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { NgModule } from '@angular/core';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -15,7 +16,10 @@ export class AboutComponent implements OnInit {
     idpersona: "1", nombre: "", apellido: "", acerca: "", titulo: "", correo: "",
     telefono: "",
     ubicacion: "",
-    fotourl: ""
+    fotourl: "",
+    username:"",
+    password:"",
+    token:"",
   }
   constructor(
     private api:PersonaService,private aut:AutenticationService

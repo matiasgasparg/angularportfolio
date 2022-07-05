@@ -21,8 +21,15 @@
      
     </ul>
   </div>
+  <div *ngIf="!login else btnCerrarSesion" class=" ps-2 pt-1">
+    <button class="btn btn-dark " (click)="iniciarSesion()">Iniciar sesión</button>
+</div>
+<ng-template #btnCerrarSesion>
+
     <div class="navbar-nav ms-auto ">
-      <a href="#" class="nav-item nav-link">Login</a>
+      
+      <a href="#" class="nav-item nav-link"(click)="cerrarSesion()"> Cerrar sesión</a>
   </div>
- 
+</ng-template>
+
 </nav>

@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.prod';
+import { BehaviorSubject, map, Observable } from 'rxjs';
+import {Persona } from '../service/interface/Persona';
+import { LoginServiceService } from '../service/api-rest/login-service.service';
+import { User } from '../service/interface/user';
 
 
 
@@ -10,36 +13,54 @@ import { environment } from 'src/environments/environment.prod';
 
 export class  AutenticationService {
 
-  public autorizado=false;
-  private url=environment.URL
+   url:string ="https://portfolio-api3320.herokuapp.com/api/login"
+  user:User={
+    username: '',
+    password: '',
+    token:""
+  }
+  private currentUserSubject: BehaviorSubject<any>;
+  public currentUser: Observable<User>;
+  constructor(private api:HttpClient,private loggedService:LoginServiceService){
+    this.currentUserSubject = new BehaviorSubject<any >(JSON.parse(sessionStorage.getItem('currentUser') || '{}' ));
+    this.currentUser = this.currentUserSubject.asObservable();
+  }
+  public get currentUserValue(): any {
+    return this.currentUserSubject.value;
+}
+loggedIn(): void {
+  this.loggedService.LogIn()
+}
+loggedOut(): void {
+  this.loggedService.LogOut();
+}
+logState(): void {
+  this.loggedService.LogState();
+}
+iniciarSesion(username: string, password: string) {
+  this.user.username = username;
+  this.user.password = password;
+  console.log("llega aca?")
+    return this.api.post<any>(this.url, this.user)
+        .pipe(map(user => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            sessionStorage.setItem('currentUser', JSON.stringify(user));
+            this.currentUserSubject.next(user);
+            console.log("funciona esto?", this.currentUserSubject.value.token)
+            this.loggedIn();
+            return user;
+           
+        }));
+        
+}
+cerrarSesion() {
+  // remove user from local storage to log user out
+  sessionStorage.removeItem('currentUser');
+  this.currentUserSubject.next(null);
+  this.loggedOut();
+}
 
-  constructor(private api:HttpClient){
-  }
-
-  modoEdicion(){
-    localStorage.setItem('sesion','true');
-  }
-  estaAutorizado(){
-    async () => {
-      this.checkToken()  
-    }
-    return this.autorizado
-
-  }
-  logout(){
-    localStorage.clear()
-    location.reload();
-  }
-  checkToken(){
-    this.api.post(this.url+"tokenValido",localStorage.getItem('sesion')).subscribe(data=>{
-      if(typeof(data)==='boolean'&& data){
-        this.modoEdicion()
-        this.autorizado=true;
-      }else{
-        localStorage.clear()
-      }
-   })
- }
+ 
 }
 
 

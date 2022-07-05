@@ -1,19 +1,27 @@
 <div class="container__skill"> 
 <div class="skill__tittle">
 
-      <h2>Experiencia</h2>
+      <h2 id="experiencia">Experiencia</h2>
     </div>
-      <div class="skill__grid" *ngFor="let exp of expList">
+    <app-btn-agregar-cont *ngIf="login" (click)="abrirModalAgregar()"></app-btn-agregar-cont>
+
+      <div class="skill__grid" *ngFor="let experiencia of experiencia">
         <div class="skill__description" >
-            <img [src]="exp.fotourl">
-          <h2> {{exp.empresa}}</h2>
+            <img [src]="experiencia.fotourl">
+          <h2> {{experiencia.empresa}}</h2>
           <p >
-            {{exp.descripcion}}
-          </p>
-          <p>
-            {{exp.inicio}}
+            {{experiencia.descripcion}}
+        
+            {{experiencia.inicio}} {{experiencia.fin}}
         </p>
+        <div>
+          <app-btn-editar *ngIf="login" (click)="abrirModal(experiencia.idlaboral)" class="me-2"></app-btn-editar>   <app-btn-eliminar *ngIf="login" (click)="borrarExperiencia(experiencia.idlaboral)" > </app-btn-eliminar>
+
         </div>
-  
+        </div>
+      
+
+
       </div>
-     
+      
+            </div>
