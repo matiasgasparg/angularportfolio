@@ -12,7 +12,10 @@
           <p >
             {{experiencia.descripcion}}
         
-            {{experiencia.inicio}} {{experiencia.fin}}
+        </p>
+        <p>
+          Inicio: {{experiencia.inicio}} - Fin: {{experiencia.fin}}
+
         </p>
         <div>
           <app-btn-editar *ngIf="login" (click)="abrirModal(experiencia.idlaboral)" class="me-2"></app-btn-editar>   <app-btn-eliminar *ngIf="login" (click)="borrarExperiencia(experiencia.idlaboral)" > </app-btn-eliminar>

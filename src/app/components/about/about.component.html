@@ -5,6 +5,8 @@
       <h2 class="section__title">Sobre mi</h2>
       <div class="about__grid">
         <div class="about__description" >
+          <app-btn-editar *ngIf="login" (click)="abrirModal(persona.idpersona)" class="me-2"></app-btn-editar> 
+
           <h2> Sobre mi</h2>
           <p>
       {{persona.acerca}}
@@ -14,6 +16,7 @@
         </div>
               <app-skill></app-skill>
               
-              <app-skillcircle></app-skillcircle>
 
       </div>
+      
+      <app-skillcircle></app-skillcircle>

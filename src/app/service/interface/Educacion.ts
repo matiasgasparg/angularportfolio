@@ -1,10 +1,10 @@
-export interface Edu{
+export interface Educacion{
 
-    ideducacion:String;
-    titulo:String;
-    fechafin:String;
-    institucion:String;
-    institucionurl:String;
-    fotourl:String;
-
+    ideducacion?: number;
+    titulo: String;
+    fechafin: String;
+    institucion: String; 
+    institucionurl: String; 
+    fotourl: String;
+    persona: number;
 }

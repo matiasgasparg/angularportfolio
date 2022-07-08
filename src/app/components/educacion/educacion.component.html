@@ -1,8 +1,9 @@
 
 
 <h2 class="educ__tittle">Educación</h2>
+<app-btn-agregar-cont *ngIf="login" (click)="crearEducacionModal()" ></app-btn-agregar-cont>
 
-<div class="container__educ"*ngFor="let edu of EduList" >     
+<div class="container__educ"*ngFor="let edu of educacion" >     
             <div class="educ__description"  >
                 <img [src]="edu.fotourl" >
 
@@ -12,7 +13,8 @@
               <p> 
                   {{edu.fechafin}}
               </p>
-              
+              <app-btn-editar *ngIf="login" (click)="abrirModal(edu.ideducacion)" class="me-2"></app-btn-editar>   <app-btn-eliminar *ngIf="login" (click)="borrarEducacion(edu.ideducacion)" > </app-btn-eliminar>
+
             </div>
       
 </div>

@@ -5,7 +5,7 @@ import { LoginServiceService } from 'src/app/service/api-rest/login-service.serv
 import { PersonaService } from 'src/app/service/api-rest/persona.service';
 import { UserService } from 'src/app/service/api-rest/user.service';
 import { Persona } from 'src/app/service/interface/Persona';
-import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { AutenticationService } from 'src/app/service/api-rest/autentication.service';
 @Component({
   selector: 'app-iniciar-sesion',
   templateUrl: './iniciar-sesion.component.html',

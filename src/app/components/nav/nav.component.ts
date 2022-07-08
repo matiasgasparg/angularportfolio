@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LoginServiceService } from 'src/app/service/api-rest/login-service.service';
 import { PersonaService } from 'src/app/service/api-rest/persona.service';
 import { Redes } from 'src/app/service/interface/Redes';
-import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { AutenticationService } from 'src/app/service/api-rest/autentication.service';
 
 @Component({
   selector: 'app-nav',

@@ -1,14 +1,17 @@
-<div class="row">
-    <h2 class="mt-2 ms-2 tipoSkill"> Soft</h2> 
-    <div *ngFor="let skill of datosSkills" class="col-6 col-md-3 " >
+
+  
+  <div class="row mt-2">
+    <h2 class="mt-2 ms-2 tipoSkill">Hard & Soft</h2> 
+    <div *ngFor="let item of skill"class="col-6 col-md-3 " >
       
-      <div>               
-          <h4 class="d-flex justify-content-center align-items-end text-center habilidad">{{skill.titulo}} </h4>
+      <div >               
+          <h4 class="d-flex justify-content-center align-items-end text-center habilidad">{{item.titulo}} </h4>
           <circle-progress
-          [percent]= skill.dominio
-          [radius]="100"
-          [outerStrokeWidth]="16"
-          [innerStrokeWidth]="8"
+           [percent]="item.dominio"
+              [radius]="100"
+              [subtitleColor]="'#000'"
+              [outerStrokeWidth]="8"
+          [innerStrokeWidth]="4"
           [outerStrokeColor]="'#036403'"
           [innerStrokeColor]="'#80ffff'"
           [animation]="true"
@@ -16,29 +19,11 @@
           [lazy]="true"
           ></circle-progress>
         </div>    
-    </div> 
-  </div>
-  
-  <div class="row mt-2">
-    <h2 class="mt-2 ms-2 tipoSkill">Hard</h2> 
-    <div *ngFor="let skill of datosSkills " class="col-6 col-md-3 " >
-      
-      <div >               
-          <h4 class="d-flex justify-content-center align-items-end text-center habilidad">{{skill.titulo}} </h4>
-          <circle-progress
-          [percent]= skill.dominio
-          [radius]="100"
-          [outerStrokeWidth]="16"
-          [innerStrokeWidth]="8"
-          [outerStrokeColor]="'#004080'"
-          [innerStrokeColor]="'#80ffff'"
-          [animation]="true"
-          [animationDuration]="300"
-          [lazy]="true"
-          ></circle-progress>
-        </div>    
-    </div> 
-  </div>
-    
+        <app-btn-editar *ngIf="login" (click)="abrirModal(item.idskill)" class="me-2"></app-btn-editar>
 
+    </div> 
+
+  </div>
+      
+  
   

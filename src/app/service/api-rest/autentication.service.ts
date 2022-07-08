@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import {Persona } from '../service/interface/Persona';
-import { LoginServiceService } from '../service/api-rest/login-service.service';
-import { User } from '../service/interface/user';
+import {Persona } from '../interface/Persona';
+import { LoginServiceService } from './login-service.service';
+import { User } from '../interface/user';
 
 
 

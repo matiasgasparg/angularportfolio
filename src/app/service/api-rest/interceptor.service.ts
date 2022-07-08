@@ -1,7 +1,7 @@
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { AutenticationService } from 'src/app/service/api-rest/autentication.service';
 
 @Injectable({
   providedIn: 'root'

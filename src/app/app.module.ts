@@ -37,6 +37,9 @@ import { LowerCasePipe } from '@angular/common';
 import { InterceptorService } from './service/api-rest/interceptor.service';
 import { BtnEliminarComponent } from './components/btn-eliminar/btn-eliminar.component';
 import { BtnEditarComponent } from './components/btn-editar/btn-editar.component';
+import { AboutmemodalComponent } from './components/aboutmemodal/aboutmemodal.component';
+import { EducacionModalComponent } from './components/educacion-modal/educacion-modal.component';
+import { SkillcircleModalComponent } from './components/skillcircle-modal/skillcircle-modal.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,9 @@ import { BtnEditarComponent } from './components/btn-editar/btn-editar.component
     SkillModalComponent,
     BtnEliminarComponent,
     BtnEditarComponent,
+    AboutmemodalComponent,
+    EducacionModalComponent,
+    SkillcircleModalComponent
     
     
   ],

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/api-rest/persona.service';
 import { Persona } from 'src/app/service/interface/Persona';
-import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { AutenticationService } from 'src/app/service/api-rest/autentication.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   public url_foto:string="";
 
   public persona:Persona ={
-    idpersona: "1", nombre: "", apellido: "", acerca: "", titulo: "", correo: "",
+    idpersona: 1, nombre: "", apellido: "", acerca: "", titulo: "", correo: "",
     telefono: "",
     ubicacion: "",
     fotourl: "",

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup} from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ExpServiceService } from 'src/app/service/api-rest/exp-service.service';
-import { Laboral } from 'src/app/service/interface/laboral';
+import { Laboral } from 'src/app/service/interface/Laboral';
 
 @Component({
   selector: 'app-skill-modal',

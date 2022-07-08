@@ -3,7 +3,7 @@ import { ExpServiceService } from 'src/app/service/api-rest/exp-service.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { SkillModalComponent } from '../skill-modal/skill-modal.component';
 import { LoginServiceService } from 'src/app/service/api-rest/login-service.service';
-import { Laboral } from 'src/app/service/interface/laboral';
+import { Laboral } from 'src/app/service/interface/Laboral';
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, tap } from 'rxjs';
-import { AutenticationService } from 'src/app/servicios/autentication.service';
+import { AutenticationService } from 'src/app/service/api-rest/autentication.service';
 import { environment } from 'src/environments/environment.prod';
-import { Edu } from '../interface/Educacion';
+import { Persona } from '../interface/Persona';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,14 @@ export class PersonaService {
     constructor(private api: HttpClient, private autorizacion:AutenticationService) { }
 
 
+    url2: string = "https://portfolio-api3320.herokuapp.com/api";
 
   getById(id: number): Observable<any>{
     return this.api.get(`https://portfolio-api3320.herokuapp.com/api/personas/${id}`);
 
   }
-  update(id:number, persona:any):Observable<any>{
-    return this.api.put(`/---------/${id}`,persona);
+  update(id: number, persona: Persona): Observable<any>{
+    return this.api.put(this.url2 + `/personas/${id}`, persona);
   }
   delete(id:number):Observable<any>{
     return this.api.delete(`/---------/${id}`);
