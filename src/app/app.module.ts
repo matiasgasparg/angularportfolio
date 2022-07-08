@@ -40,6 +40,7 @@ import { BtnEditarComponent } from './components/btn-editar/btn-editar.component
 import { AboutmemodalComponent } from './components/aboutmemodal/aboutmemodal.component';
 import { EducacionModalComponent } from './components/educacion-modal/educacion-modal.component';
 import { SkillcircleModalComponent } from './components/skillcircle-modal/skillcircle-modal.component';
+import { HomeModalComponent } from './components/home-modal/home-modal.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { SkillcircleModalComponent } from './components/skillcircle-modal/skillc
     BtnEditarComponent,
     AboutmemodalComponent,
     EducacionModalComponent,
-    SkillcircleModalComponent
+    SkillcircleModalComponent,
+    HomeModalComponent
     
     
   ],

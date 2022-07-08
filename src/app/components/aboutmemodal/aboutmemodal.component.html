@@ -1,8 +1,17 @@
-<form [formGroup]="formulario" (ngSubmit)="actualizarAbout()">
+<form [formGroup]="formulario" (ngSubmit)="actualizarSobreMi()">
     
     <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Acerca de mi: </span>
-        <input type="text" class="form-control" placeholder="acerca de mi" formControlName="acerca" >
+        <input type="text" class="form-control" placeholder="acerca" formControlName="acerca" >
+    </div>
+    <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Telefono: </span>
+        <input type="text" class="form-control" placeholder="telefono" formControlName="telefono" >
+    </div>
+
+    <div class="input-group flex-nowrap mt-2">
+    <span class="input-group-text">Ubicación:</span>
+    <input type="text" class="form-control" placeholder="ubicacion" formControlName="ubicacion" >
     </div>
 
     <div class="d-flex">

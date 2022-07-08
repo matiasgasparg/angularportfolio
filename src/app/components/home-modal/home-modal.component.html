@@ -1,0 +1,30 @@
+<form [formGroup]="formulario" (ngSubmit)="actualizar()">
+    <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Nombre: </span>
+        <input type="text" class="form-control" placeholder= "nombre" formControlName="nombre">
+    </div>
+
+    <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Apellido: </span>
+        <input type="text" class="form-control" placeholder="apellido" formControlName="apellido" >
+    </div>
+
+    <div class="input-group flex-nowrap mt-2">
+        <label class="input-group-text texto-titulo">Titulo: </label>
+        <input type="text" class="form-control" placeholder="titulo" formControlName="titulo">
+    </div>
+
+
+    <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Foto Perfil: </span>
+        <input type="text" class="form-control" placeholder="subir Foto perfil" formControlName="fotourl">
+    </div>
+
+
+    <div>
+        <button class="btn btn-primary">Guardar</button>
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="cerrarModal()">Cerrar</button>
+    </div>
+</form>

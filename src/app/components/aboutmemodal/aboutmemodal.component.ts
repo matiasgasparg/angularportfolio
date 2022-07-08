@@ -17,8 +17,9 @@ export class AboutmemodalComponent implements OnInit {
 
   constructor(public activeModal: NgbActiveModal, private personaService:PersonaService, private fb: FormBuilder) { 
     this.formulario = this.fb.group({
-   
+      ubicacion:[''],
       acerca: [''],
+      telefono:[''],
 
   })
 
@@ -43,16 +44,19 @@ export class AboutmemodalComponent implements OnInit {
          );
 
 }
-editarForm(abt:any){
+editarForm(sobremi:any){
   this.formulario.setValue( {
     
-    acerca: abt.acerca,
+    acerca: sobremi.acerca,
+    telefono:sobremi.telefono,
+    ubicacion:sobremi.ubicacion,
+
   });
 }
 
-actualizarAbout(){
+actualizarSobreMi(){
   
-  this.armarPersona()
+  this.armar()
   console.log(this.persona)
   this.personaService.update(this.id,this.persona).subscribe (
     data => {      
@@ -62,10 +66,11 @@ actualizarAbout(){
   );
 }
 
-armarPersona(){
-    
+armar(){
   
     this.persona.acerca = this.formulario.value.acerca;
+    this.persona.telefono=this.formulario.value.telefono
+    this.persona.ubicacion = this.formulario.value.ubicacion;
 }
 
 }
