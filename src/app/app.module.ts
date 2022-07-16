@@ -42,6 +42,7 @@ import { SkillcircleModalComponent } from './components/skillcircle-modal/skillc
 import { HomeModalComponent } from './components/home-modal/home-modal.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectosModalComponent } from './components/proyectos-modal/proyectos-modal.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { ProyectosModalComponent } from './components/proyectos-modal/proyectos-
     SkillcircleModalComponent,
     HomeModalComponent,
     ProyectosComponent,
-    ProyectosModalComponent
+    ProyectosModalComponent,
+    FooterComponent
     
     
   ],
