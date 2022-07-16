@@ -16,7 +16,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule,FormsModule} from '@angular/forms';
-import { ProfileComponent } from './components/profile/profile.component';
 import { SkillcircleComponent } from './components/skillcircle/skillcircle.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,6 +40,8 @@ import { AboutmemodalComponent } from './components/aboutmemodal/aboutmemodal.co
 import { EducacionModalComponent } from './components/educacion-modal/educacion-modal.component';
 import { SkillcircleModalComponent } from './components/skillcircle-modal/skillcircle-modal.component';
 import { HomeModalComponent } from './components/home-modal/home-modal.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ProyectosModalComponent } from './components/proyectos-modal/proyectos-modal.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,6 @@ import { HomeModalComponent } from './components/home-modal/home-modal.component
     EducacionComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    ProfileComponent,
     SkillcircleComponent,
     BtnAgregarContComponent,
     SkillModalComponent,
@@ -63,7 +63,9 @@ import { HomeModalComponent } from './components/home-modal/home-modal.component
     AboutmemodalComponent,
     EducacionModalComponent,
     SkillcircleModalComponent,
-    HomeModalComponent
+    HomeModalComponent,
+    ProyectosComponent,
+    ProyectosModalComponent
     
     
   ],

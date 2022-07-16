@@ -1,0 +1,21 @@
+
+
+<h2 class="educ__tittle">Proyectos</h2>
+<app-btn-agregar-cont *ngIf="login" (click)="crearProyectoModal()" ></app-btn-agregar-cont>
+
+<div class="container__educ"*ngFor="let pro of proyecto" >     
+            <div class="educ__description"  >
+                <img [src]="pro.url" >
+
+              <h2 class="educ__subtittle" > {{pro.titulo}}</h2>
+              <br>
+
+              <p> 
+                  {{pro.descripcion}}
+              </p>
+              <app-btn-editar *ngIf="login" (click)="abrirModal(pro.idproyecto)" class="me-2"></app-btn-editar>   <app-btn-eliminar *ngIf="login" (click)="borrarProyecto(pro.idproyecto)" > </app-btn-eliminar>
+
+            </div>
+      
+</div>
+

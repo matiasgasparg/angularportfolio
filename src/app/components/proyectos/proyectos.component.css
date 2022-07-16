@@ -1,0 +1,42 @@
+.container__educ{
+    box-shadow: 1px 1px 9px 1px rgba(160,157,159,0.48);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 25px;
+  }
+  .container__educ img{
+    max-height: 100px;
+    max-width: 160px;    
+    float: left;
+    margin-right: 20px;
+}
+
+    .educ__tittle{
+        margin-bottom: 20px;
+      
+    }
+
+    
+  
+    .educ__subtittle{
+        font-size: 20px;
+        display: inline;
+        
+    }
+
+    .educ__description {
+        color: var(--grey);
+        line-height: 40px;
+        
+      }
+    
+    .educ__description span {
+      color: grey;
+    }
+    
+    .educ__description p {
+      color: grey;
+      font-size: 16px;
+
+    }
+    
