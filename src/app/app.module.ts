@@ -98,7 +98,7 @@ import { FooterComponent } from './components/footer/footer.component';
       outerStrokeColor: "#004080",
       innerStrokeColor: "#80ffff",
       animationDuration: 300,
-      titleFontSize: "45",
+      titleFontSize: "30",
       showSubtitle: false,
       responsive: true
       

@@ -23,8 +23,8 @@ export class IniciarSesionComponent implements OnInit{
   constructor(private router: Router, private loginService: LoginServiceService, private formBuilder: FormBuilder, private autentificacionServ:AutenticationService,private userService:UserService) {
     this.form = this.formBuilder.group(
         {
-          username:["",[Validators.required, Validators.email]],
-          password:["",[Validators.required, Validators.minLength(3)]]
+          username: ['', [Validators.required, Validators.minLength(3), Validators.pattern('[a-zA-Z0-9]*')]],
+          password: ['', [Validators.required, Validators.minLength(3), Validators.pattern('[a-zA-Z0-9]*')]],
         } 
       )
   }
@@ -35,7 +35,7 @@ export class IniciarSesionComponent implements OnInit{
   get Username(){
     return this.form.get("username"); 
   }
-
+      
   get Password(){
     return this.form.get("password");
   }
@@ -73,7 +73,7 @@ export class IniciarSesionComponent implements OnInit{
 
   
 
-  iniciarSesion() {
+    iniciarSesion() {
     
     console.log(this.form.value);
     this.autentificacionServ.iniciarSesion(this.form.value.username, this.form.value.password).subscribe( data => {
@@ -94,3 +94,22 @@ export class IniciarSesionComponent implements OnInit{
  
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
