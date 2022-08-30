@@ -43,6 +43,7 @@ import { HomeModalComponent } from './components/home-modal/home-modal.component
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectosModalComponent } from './components/proyectos-modal/proyectos-modal.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import { FooterComponent } from './components/footer/footer.component';
     }),
     
     BrowserAnimationsModule,
+          NgbModule,
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
